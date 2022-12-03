@@ -1,0 +1,17 @@
+<svg viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
+    <!-- Our symbol in its own coordinate system -->
+    <symbol id="wave" width="40" height="20" viewBox="-20 -20 40 20">
+        <g fill="transparent" stroke="black" stroke-width="2">
+            <circle r="19" fill="white" />
+            <circle r="14" />
+            <circle r="9" />
+            <circle r="4" />
+        </g>
+    </symbol>
+    <use href="#wave" x="-20" y="-10" />
+    <use href="#wave" x="20" y="-10" />
+    <use href="#wave" x="0" y="0" />
+    <use href="#wave" x="-20" y="10" />
+    <use href="#wave" x="20" y="10" />
+    <use href="#wave" x="0" y="20" />
+</svg>
