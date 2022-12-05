@@ -1,0 +1,41 @@
+# title: Hata
+# email:
+# description:
+# baseurl: ""
+# url: "https://paolobrasolin.github.io/hata"
+
+permalink: none
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  # math_engine: null # lets KaTeX parse display math on client side
+
+# plugins:
+#   - jekyll-seo-tag
+#   - jekyll-default-layout
+#   - jekyll-titles-from-headings
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - travis/
+  - .byebug_history
+
+# antex:
+#   inlining: true
+#   aliases:
+#     # disable most aliases and let KaTeX render simple
+#     display_math: false
+#     inline_math: false
+#     inline_macro: false
+
+github:
+  blobs_url: https://github.com/paolobrasolin/hata/blob/jekyll
+
+collections:
+  - flags
