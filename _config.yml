@@ -38,4 +38,16 @@ github:
   blobs_url: https://github.com/paolobrasolin/hata/blob/jekyll
 
 collections:
-  - flags
+  flags:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "flags"
+    values:
+      layout: "flag"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
