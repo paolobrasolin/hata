@@ -2,6 +2,12 @@
 layout: default
 ---
 
-<main>
+<main class="flag">
+    <header>
+        <h1><a href="{{'/' | relative_url }}">HATA</a> &gt; {{ page.name }}</h1>
+        {% include authors.html content=page.authors %}
+    </header>
+
+    <img class="banner" src="./banner.svg">
     {{ content }}
 </main>

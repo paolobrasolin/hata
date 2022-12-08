@@ -11,12 +11,11 @@ html {
   background-attachment: fixed;
 }
 
-header {
+.sunset__wrapper {
   width: 100%;
-  /* height: 20rem; */
 }
 
-header > div {
+.sunset__picture {
   width: 100%;
   /* height: 100%; */
   padding-bottom: 50%;
@@ -37,6 +36,19 @@ header > div {
   background-position-y: 100%;
 }
 
+.sunset__title {
+  color: white;
+  font-weight: bolder;
+  font-size: 4rem;
+  height: 4rem;
+  align-items: end;
+  padding: 1rem 2rem;
+  margin-top: -4rem;
+  box-sizing: border-box;
+  display: flex;
+  text-shadow: black 0 0 1rem;
+}
+
 body {
   max-width: 40rem;
   margin: 4rem auto;
@@ -44,6 +56,12 @@ body {
   background-color: #2c3331;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
   /* border: 1px lightgrey solid; */
+}
+
+/* NOTE: this is pretty lazy and kinda ugly */
+a:link,
+a:visited {
+  color: white;
 }
 
 main {
@@ -74,4 +92,20 @@ main {
 
 .grid__flag--inactive {
   filter: saturate(0);
+}
+
+.index > hr {
+  margin: 1rem 0;
+}
+
+.flag > header {
+}
+
+.flag > img {
+  padding: 1rem 0;
+  width: 100%;
+}
+
+footer {
+  margin-top: 1rem;
 }

@@ -1,0 +1,11 @@
+{% if include.content %}
+{% assign mentions = '' | split: '' %}
+{% for author_id in include.content %}
+{% assign author = site.data.authors | where: "id", author_id | first %}
+{% capture mention -%}
+<a rel="author" href="{{ author.link }}" title="{{ author.name }}">{{ author.name }}</a>
+{%- endcapture %}
+{% assign mentions = mentions | push: mention %}
+{% endfor %}
+Curated by: {{ mentions | map: 'to_liquid' | array_to_sentence_string }}.
+{% endif %}

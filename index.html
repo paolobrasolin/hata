@@ -1,27 +1,45 @@
 ---
-layout: page
+layout: default
+authors: [paolobrasolin, tetrapharmakon]
 ---
 
-<div class="grid">
-  {% for flag in site.flags %}
-  {% unless flag.placeholder %}
-  <a class="grid__flag" href="{{ flag.url }}">
-    <img class="flag__thumb" width="100px" src="{{ flag.thumbnail_url }}">
-    <small class="flag__label">{{ flag.name }}</small>
-  </a>
-  {% endunless %}
-  {% endfor %}
-</div>
+<header class="sunset__wrapper">
+  <div class="sunset__picture"></div>
+  <div class="sunset__title">HATA</div>
+</header>
 
-<hr>
+<main class="index">
+  <p>
+    This is a collection of reverse engineered Japanese prefectures flags.
+  </p>
+  <p>
+    {% assign authors = site.data.authors | map: "id" %}
+    {% include authors.html content=authors %}
+  </p>
 
-<div class="grid">
-  {% for flag in site.flags %}
-  {% if flag.placeholder %}
-  <a class="grid__flag grid__flag--inactive" href="{{ flag.reference_url }}">
-    <img class="flag__thumb" width="100px" src="{{ flag.thumbnail_url }}">
-    <small class="flag__label">{{ flag.name }}</small>
-  </a>
-  {% endif %}
-  {% endfor %}
-</div>
+  <hr>
+
+  <div class="grid">
+    {% for flag in site.flags %}
+    {% unless flag.placeholder %}
+    <a class="grid__flag" href="{{ flag.url }}">
+      <img class="flag__thumb" width="100px" src="{{ flag.thumbnail_url }}">
+      <small class="flag__label">{{ flag.name }}</small>
+    </a>
+    {% endunless %}
+    {% endfor %}
+  </div>
+
+  <hr>
+
+  <div class="grid">
+    {% for flag in site.flags %}
+    {% if flag.placeholder %}
+    <a class="grid__flag grid__flag--inactive" href="{{ flag.reference_url }}">
+      <img class="flag__thumb" width="100px" src="{{ flag.thumbnail_url }}">
+      <small class="flag__label">{{ flag.name }}</small>
+    </a>
+    {% endif %}
+    {% endfor %}
+  </div>
+</main>
