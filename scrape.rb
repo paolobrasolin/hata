@@ -1,6 +1,7 @@
 require "open-uri"
 require "net/http"
 require "nokogiri"
+require "pathname"
 
 require "i18n"
 I18n.available_locales = [:en]
@@ -33,8 +34,11 @@ doc.css(".gallerybox").each do |box|
 end
 
 flags.each do |flag|
-  File.write("_flags/#{flag[:slug]}.md", <<~MARKDOWN)
+  path = Pathname("_flags/#{flag[:slug]}/")
+  path.mkpath
+  path.join("index.md").write(<<~MARKDOWN)
     ---
+    placeholder: true
     name: #{flag[:name]}
     slug: #{flag[:slug]}
     reference_url: #{flag[:reference_url]}

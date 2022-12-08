@@ -4,12 +4,20 @@ layout: page
 
 <div class="grid">
   {% for flag in site.flags %}
-  {% if flag.published %}
+  {% unless flag.placeholder %}
   <a class="grid__flag" href="{{ flag.url }}">
     <img class="flag__thumb" width="100px" src="{{ flag.thumbnail_url }}">
     <small class="flag__label">{{ flag.name }}</small>
   </a>
-  {% else %}
+  {% endunless %}
+  {% endfor %}
+</div>
+
+<hr>
+
+<div class="grid">
+  {% for flag in site.flags %}
+  {% if flag.placeholder %}
   <a class="grid__flag grid__flag--inactive" href="{{ flag.reference_url }}">
     <img class="flag__thumb" width="100px" src="{{ flag.thumbnail_url }}">
     <small class="flag__label">{{ flag.name }}</small>
