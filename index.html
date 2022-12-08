@@ -22,7 +22,7 @@ authors: [paolobrasolin, tetrapharmakon]
   <div class="grid">
     {% for flag in site.flags %}
     {% unless flag.placeholder %}
-    <a class="grid__flag" href="{{ flag.url }}">
+    <a class="grid__flag" href="{{ flag.url | relative_url }}">
       <img class="flag__thumb" width="100px" src="{{ flag.thumbnail_url }}">
       <small class="flag__label">{{ flag.name }}</small>
     </a>
