@@ -1,0 +1,23 @@
+\documentclass{standalone}
+\usepackage{tikz, xcolor}
+\usetikzlibrary{calc}
+% \usepackage{tikz-dimline}
+
+\definecolor{okinawaRed}{HTML}{C8003C}
+
+% \def\styledDimline#1#2#3{\dimline[label style={above=0.8ex,font=\tiny},extension start length=45mm, extension end length=45mm]{#1}{#2}{#3}}
+
+\begin{document}
+\begin{tikzpicture}[x=3mm,y=3mm]
+    \fill[white] (-21,-14) rectangle (21,14);
+    \fill[okinawaRed] (0,0-9) arc (-90:270:20*0.5);
+    \fill[white]      (0,5-9) arc (-90:270:14*0.5);
+    \fill[okinawaRed] (0,9-9) arc (-90:270: 9*0.5);
+    % \styledDimline{(-15,0)}{(-15,5)}{$5$};
+    % \styledDimline{(-15,5)}{(-15,5+4)}{$4$};
+    % \styledDimline{(-15,5+4)}{(-15,5+4+9)}{$9$};
+    % \styledDimline{(-15,5+4+9)}{(-15,5+4+9+1)}{$1$};
+    % \styledDimline{(-15,5+4+9+1)}{(-15,5+4+9+1+1)}{$1$};
+\end{tikzpicture}
+
+\end{document}
