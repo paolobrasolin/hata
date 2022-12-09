@@ -22,8 +22,9 @@ authors: [paolobrasolin, tetrapharmakon]
   <div class="grid">
     {% for flag in site.flags %}
     {% unless flag.placeholder %}
-    <a class="grid__flag" href="{{ flag.url | relative_url }}">
-      <img class="flag__thumb" width="100px" src="{{ flag.url | remove: 'index.html' }}/banner.svg">
+    {% assign path = flag.url | remove: 'index.html' | relative_url %}
+    <a class="grid__flag" href="{{ path }}">
+      <img class="flag__thumb" width="100px" src="{{ path }}banner.svg">
       <small class="flag__label">{{ flag.name }}</small>
     </a>
     {% endunless %}
