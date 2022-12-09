@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{tikz, xcolor}
+\usetikzlibrary{calc, quotes, arrows}
+\usepackage{tikz-dimline}
+
+\definecolor{tokushimaGold}{HTML}{fcd400}
+\definecolor{tokushimaBlue}{HTML}{234794}
+
+\begin{document}
+\begin{tikzpicture}[x=3mm,y=3mm]
+    \fill[use as bounding box, tokushimaBlue] (-900/4.2/2,-75) rectangle (900/4.2/2,75);
+    \fill[tokushimaGold] (0,0) circle (45);
+    \fill[tokushimaGold] (-50, 45) -- ++(30, 0) -- ++(70, -90) -- ++(-30, 0) -- cycle;
+    \fill[tokushimaGold] (0, -45) -- ++(0, 90) -- ++(55.815630565, 0) -- cycle;
+    \fill[tokushimaBlue] (0,0) circle (20);
+    \fill[tokushimaBlue] (0, 20) -- ++(50,0) -- ++(0,-4) -- ++(-50,0) -- cycle;
+    \fill[tokushimaBlue] (-1,-18) -- ++(21, -27) -- ++(-5.067446334, 0) -- ++(-21, 27) -- cycle;
+\end{tikzpicture}
+
+\end{document}
